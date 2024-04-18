@@ -2,82 +2,82 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 
-  void main() {
-    runApp(MaterialApp(
-      theme:ThemeData(
-       primaryColor: Colors.purple
-      ),
-      debugShowCheckedModeBanner: false,
-      home: LoginPage(),
-      ));
+void main() {
+  runApp(MaterialApp(
+    theme:ThemeData(
+        primaryColor: Colors.purple
+    ),
+    debugShowCheckedModeBanner: false,
+    home: LoginPage(),
+  ));
 
-  }
+}
 
-  class LoginPage extends StatelessWidget {
-    @override
-    Widget build(BuildContext context) {
-      return Scaffold(
-        body: SingleChildScrollView(
-          child: Container(
-            height:MediaQuery.of(context).size.height,
-            width:MediaQuery.of(context).size.width,
-            decoration:BoxDecoration(
+class LoginPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SingleChildScrollView(
+        child: Container(
+          height:MediaQuery.of(context).size.height,
+          width:MediaQuery.of(context).size.width,
+          decoration:BoxDecoration(
               gradient: LinearGradient(
-                begin:Alignment.topLeft,
-                end: Alignment.bottomRight,
-                colors: [
-                  Color(0xFF8A2387),
-                  Color(0xFFE94057),
-                  Color(0xFFF27121),
-                ]
+                  begin:Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                  colors: [
+                    Color(0xFF8A2387),
+                    Color(0xFFE94057),
+                    Color(0xFFF27121),
+                  ]
               )
-            ),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.
-              center,
-              children:[
-                SizedBox(height: 80,),
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.
+            center,
+            children:[
+              SizedBox(height: 80,),
               //Image.asset('assets/logo.png'),
-                SizedBox(height: 15,),
-                Text('Study Hive',
+              SizedBox(height: 15,),
+              Text('Study Hive',
                 style: TextStyle(
                   color:Colors.white,
                   fontSize:20,
                 ),
-                ),
-                SizedBox(height:30,),
-                Container(
-                  height:480,
-                  width:325,
-                  decoration: BoxDecoration(
+              ),
+              SizedBox(height:30,),
+              Container(
+                height:480,
+                width:325,
+                decoration: BoxDecoration(
                     color:Colors.white,
                     borderRadius:BorderRadius.circular(10)
-                  ),
-                  child: Column(
+                ),
+                child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       SizedBox(height:30,),
-                      Text('Welcome',
-                      style: TextStyle(
-                        fontSize: 35,
-                        fontWeight: FontWeight.bold
-                      ),
+                      Text('Welcome!',
+                        style: TextStyle(
+                            fontSize: 35,
+                            fontWeight: FontWeight.bold
+                        ),
                       ),
                       SizedBox(height: 10,),
                       Text('Please Login to Your Account',
-                      style: TextStyle(
-                        fontSize:15,
-                        color: Colors.grey
-                      ),
+                        style: TextStyle(
+                            fontSize:15,
+                            color: Colors.grey
+                        ),
                       ),
                       SizedBox(height:20,),
                       Container(
                         width:250,
                         child:TextField(
                           decoration: InputDecoration(
-                            labelText:'EmailAddress',
+                            labelText:'Email Address or Username',
                             suffixIcon: Icon(FontAwesomeIcons.envelope,
-                            size:17,),
+                              size:17,),
 
                           ),
                         ),
@@ -89,7 +89,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
                           decoration: InputDecoration(
                             labelText : 'Password',
                             suffixIcon: Icon(FontAwesomeIcons.eyeSlash,
-                            size:17,),
+                              size:17,),
                           ),
                         ),
                       ),
@@ -98,10 +98,10 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.end,
                           children: [
-                            Text('Forget Password',
-                            style: TextStyle(
-                              color:Colors.orangeAccent[700]
-                            ),
+                            Text('Forgot Password?',
+                              style: TextStyle(
+                                  color:Colors.orangeAccent[700]
+                              ),
                             ),
                           ],
                         ),
@@ -127,22 +127,22 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
                             padding: EdgeInsets.all(12.0),
                             child: Text('Login',
                               style: TextStyle(
-                                color:Colors.white,
-                                fontSize: 20,
-                                fontWeight: FontWeight.bold
+                                  color:Colors.white,
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold
                               ),
+                            ),
                           ),
                         ),
-                      ),
 
                       ),
                     ]
-                  ),
                 ),
-              ],
-            ),
+              ),
+            ],
           ),
         ),
-      );
-    }
+      ),
+    );
   }
+}
