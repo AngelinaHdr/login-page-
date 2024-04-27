@@ -1,0 +1,74 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: HomeScreen(),
+    );
+  }
+}
+
+class HomeScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.white,
+      appBar: AppBar(
+        title: Text('Home'),
+        backgroundColor: Colors.purpleAccent,
+      ),
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          Padding(
+            padding: EdgeInsets.all(16.0),
+            child: Text(
+              'Forums',
+              style: TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+                color: Colors.purple,
+              ),
+            ),
+          ),
+          Expanded(
+            child: ListView.builder(
+              itemCount: 30,
+              itemBuilder: (context, index) {
+                return ListTile(
+                  title: Text('Forum Post ${index + 1}'),
+                );
+              },
+            ),
+          ),
+          Padding(
+            padding: EdgeInsets.all(16.0),
+            child: Text(
+              'Friends',
+              style: TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+                color: Colors.pink,
+              ),
+            ),
+          ),
+          Expanded(
+            child: ListView.builder(
+              itemCount: 10, // Assuming there are 10 friends
+              itemBuilder: (context, index) {
+                return ListTile(
+                  title: Text('Friend ${index + 1}'),
+                );
+              },
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
