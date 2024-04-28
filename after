@@ -245,19 +245,12 @@ class _LoginState extends State<Login> {
                         'Register',
                         style: TextStyle(
                           color: Colors.deepPurple[900],
-                          // Changed color for better visibility
                           fontSize: 18,
-                          // Increased font size
-                          decoration: TextDecoration.underline,
-                          shadows: [Shadow( // Added shadow
-                            blurRadius: 2.0,
-                            color: Colors.black,
-                            offset: Offset(0.0, 1.0),
                           )
-                          ],
+
                         ),
                       ),
-                    ),
+
                     SizedBox(height: 16),
                     Text(
                       _errorMessage,
